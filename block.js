@@ -1,21 +1,21 @@
 class Block{
-    constructor(x, y, width, height,) {
+    constructor(x, y, width, height, color1) {
         var options = {
-            'restitution':0.8,
-            'friction':0.5,
-            'density':1.0,
-           
+            'restitution':0.5,
+            'friction':1.5,
+            'density':0.5
         }
         this.body = Bodies.rectangle(x, y, width, height, options);
         this.width = width;
         this.height = height;
+        this.color1 = color1;
         World.add(world, this.body);
       }
       display(){
         var pos =this.body.position;
         push();
         rectMode(CENTER);
-        fill("grey")
+        fill(this.color1)
         rect(pos.x, pos.y, this.width, this.height);
         pop();
       }
