@@ -13,8 +13,10 @@ class Block{
       }
       display(){
         var pos =this.body.position;
+        push();
         rectMode(CENTER);
         fill("grey")
         rect(pos.x, pos.y, this.width, this.height);
+        pop();
       }
 }

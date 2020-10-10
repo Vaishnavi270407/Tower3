@@ -79,17 +79,16 @@ function setup() {
   block54 = new Block(770,190,20,20);
 
 
-  polygon = new Polygon(50,200,20);
+  polygon = new Polygon(100,200,20);
 
-  slingShot = new SlingShot(polygon.body,{x:100,y:100});
+  slingShot = new SlingShot(polygon.body,{x:200,y:100});
 }
 
 function draw() {
 
   background(200,200,200);  
   Engine.update(engine);
-  strokeWeight(4);
-
+  
   ground1.display();
   ground2.display();
 
@@ -169,3 +168,9 @@ function mouseReleased(){
   slingShot.fly();
 }
 
+function keyPressed(){
+	if(keyCode===32){
+		Matter.Body.setPosition(polygon.body,{x:100,y:100})
+		slingShot.attach(polygon.body);
+	}
+}
