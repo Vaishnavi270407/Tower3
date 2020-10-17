@@ -16,6 +16,7 @@ function setup() {
 
   ground1 = new Ground(400,320,200,20);
   ground2 = new Ground(700,250,200,20);
+  ground3 = new Ground(500,380,1000,5);
 
   block1 = new Block(310,300,20,20, "cyan");
   block2 = new Block(330,300,20,20, "cyan");
@@ -88,6 +89,7 @@ function draw() {
  
   ground1.display();
   ground2.display();
+  ground3.display();
 
   block1.display();
   block2.display();
