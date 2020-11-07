@@ -18,9 +18,9 @@ var block5 = [];
 var score = 0;
 var bag = 0;
 
-//function preload() {
-//  getBg();  
-//}
+function preload() {
+  getBg();  
+}
 
 function setup() {
 
@@ -99,10 +99,10 @@ function setup() {
 }
 
 function draw() {
-//  if(backgroundImg){
-//    background(backgroundImg);
-//}
-  background(200,200,200);
+  if(backgroundImg){
+    background(backgroundImg);
+}
+  //rbackground(200,200,200);
   Engine.update(engine);
  
   text("Press Space to play again!!",350 ,50);
@@ -168,18 +168,18 @@ function keyPressed(){
 		slingShot.attach(polygon.body);
 	}
 }
-/*
+
 async function getBg(){
   //http://worldtimeapi.org/api/timezone/Asia/Kolkata
   var response  = await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata");
   var responseJson  = await response.json();
   var hour = responseJson.datetime.slice(11,13);
-  if(hour>=06 && hour<16){
+  if(hour>=06 && hour<18){
     backgroundImg = loadImage("bg.png");
   }
   else{
     backgroundImg = loadImage("bg2.jpg");
   }
   
-}*/
+}
 
