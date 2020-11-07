@@ -26,9 +26,15 @@ class Block{
         else{
           push();
           this.visibility = this.visibility-5;
+          
           tint(0, 153, 204, this.visibility);
           pop();
           World.remove(world, this.body);
+        }
+      }
+      score(){
+        if(this.visibility>0 && this.visibility < 100){
+          score++;
         }
       }
 }
